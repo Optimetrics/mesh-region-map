@@ -680,7 +680,9 @@
     const map = L.map("map", { minZoom: 1 }).setView(initialCenter, initialZoom, { animate: false });
     const loadedRegionFeatures = [];
     const regionLayers = [];
-    const regionPathPrefix = window.location.pathname.includes("/regions/") ? "" : "regions/";
+    // This standalone site keeps index.json and every region .geojson file
+    // alongside index.html, so paths always resolve relative to this page.
+    const regionPathPrefix = "";
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
