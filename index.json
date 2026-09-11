@@ -1,0 +1,61 @@
+{
+  "title": "Michigan MeshCore Region Map",
+  "regions": [
+    {
+      "id": "mi",
+      "name": "Michigan (statewide)",
+      "short_name": "MI",
+      "region_type": "State Region",
+      "coordination_status": "political_boundaries",
+      "coordination_label": "State boundary",
+      "file": "mi.geojson",
+      "optional": true,
+      "visible": false
+    },
+    {
+      "id": "mi-west",
+      "name": "West Michigan",
+      "short_name": "MI-WEST",
+      "region_type": "Michigan Subregion",
+      "coordination_status": "proposed",
+      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "file": "mi-west.geojson"
+    },
+    {
+      "id": "mi-central",
+      "name": "Central Michigan",
+      "short_name": "MI-CENTRAL",
+      "region_type": "Michigan Subregion",
+      "coordination_status": "proposed",
+      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "file": "mi-central.geojson"
+    },
+    {
+      "id": "mi-east",
+      "name": "Southeast Michigan",
+      "short_name": "MI-EAST",
+      "region_type": "Michigan Subregion",
+      "coordination_status": "proposed",
+      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "file": "mi-east.geojson"
+    },
+    {
+      "id": "mi-north",
+      "name": "Northern Michigan",
+      "short_name": "MI-NORTH",
+      "region_type": "Michigan Subregion",
+      "coordination_status": "proposed",
+      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "file": "mi-north.geojson"
+    },
+    {
+      "id": "mi-upper",
+      "name": "Upper Peninsula",
+      "short_name": "MI-UPPER",
+      "region_type": "Michigan Subregion",
+      "coordination_status": "proposed",
+      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "file": "mi-upper.geojson"
+    }
+  ]
+}
