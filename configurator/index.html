@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michigan MeshCore Region Configurator</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#111; --muted:#666; --line:#ddd; --card:#f6f7f9; --accent:#1971c2; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111418; --fg:#eee; --muted:#aaa; --line:#333; --card:#1b1f26; --accent:#74b3f0; } }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.55 system-ui,sans-serif; background:var(--bg); color:var(--fg); }
+  main { max-width:720px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 20px; }
+  fieldset { border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:0 0 14px; }
+  legend { font-weight:600; padding:0 6px; }
+  label { display:block; margin:6px 0; }
+  input[type=text], select { width:100%; font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--fg); }
+  .row { display:flex; gap:10px; flex-wrap:wrap; }
+  .row > * { flex:1 1 200px; }
+  .chip { display:inline-block; padding:2px 10px; border-radius:999px; font-size:13px; border:1px solid var(--line); background:var(--card); margin-right:6px; }
+  .chip.live { border-color:#2b8a3e; color:#2b8a3e; }
+  .chip.ref { border-color:var(--muted); color:var(--muted); }
+  .out { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin-top:16px; }
+  pre { margin:8px 0 0; padding:12px; background:var(--bg); border:1px solid var(--line); border-radius:8px; overflow:auto; font-size:14px; }
+  button { font:inherit; padding:8px 14px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--fg); cursor:pointer; }
+  button:hover { background:var(--card); }
+  .note { color:var(--muted); font-size:14px; margin:8px 0 0; }
+  .warn { border-left:4px solid #e67700; padding:8px 12px; margin:10px 0 0; background:var(--card); border-radius:0 8px 8px 0; font-size:14px; }
+  .hide { display:none; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Michigan MeshCore region configurator</h1>
+  <p class="sub">Answer four questions, paste the commands. Recommendations, not rules; see <a href="https://michmesh.com/docs/MeshCore/Regions-and-Scoping">Regions and Scoping</a> for the reasoning.</p>
+
+  <fieldset>
+    <legend>1. Where is the node?</legend>
+    <div class="row">
+      <label>City or town<br><input type="text" id="city" list="cities" placeholder="Start typing… e.g. Holland" autocomplete="off"></label>
+      <label>County<br><select id="county"><option value="">— choose —</option></select></label>
+    </div>
+    <datalist id="cities"></datalist>
+    <div id="where" class="note"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>2. What is it?</legend>
+    <label><input type="radio" name="role" value="repeater" checked> Repeater (or room server)</label>
+    <label><input type="radio" name="role" value="companion"> Companion (the radio in your pocket)</label>
+  </fieldset>
+
+  <fieldset id="fwfs">
+    <legend>3. Repeater firmware (run <code>ver</code>)</legend>
+    <select id="fw">
+      <option value="116">1.16 or later</option>
+      <option value="115">1.15</option>
+      <option value="110">1.10 – 1.14</option>
+      <option value="old">Below 1.10</option>
+    </select>
+  </fieldset>
+
+  <fieldset id="optfs">
+    <legend>4. Options</legend>
+    <label><input type="checkbox" id="cap" checked> Cap unscoped floods at 3 hops (<code>flood.max.unscoped 3</code>). Recommended; sparse areas may leave it off.</label>
+    <label><input type="checkbox" id="bridge"> This site genuinely serves a neighboring subregion too</label>
+    <div id="bridgesel" class="hide"><label>Neighboring subregion<br><select id="neighbor"></select></label></div>
+  </fieldset>
+
+  <div class="out" id="out">
+    <div id="summary"></div>
+    <pre id="cmd"></pre>
+    <div id="notes"></div>
+    <p><button id="copy">Copy commands</button> <span id="copied" class="note"></span></p>
+  </div>
+
+  <p class="note">Data: county assignments per RFC-001 Addendum A. Only <code>grr</code> and <code>azo</code> are live local regions today. Edit <code>data.json</code> to change any of this.</p>
+</main>
+<script>
+let D;
+const $=id=>document.getElementById(id);
+fetch('data.json').then(r=>r.json()).then(d=>{D=d;init();});
+
+function init(){
+  const cs=$('county'); Object.keys(D.counties).sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;cs.appendChild(o);});
+  const dl=$('cities'); Object.keys(D.cities).sort().forEach(c=>{const o=document.createElement('option');o.value=c;dl.appendChild(o);});
+  const nb=$('neighbor'); Object.entries(D.subregions).forEach(([k,v])=>{const o=document.createElement('option');o.value=k;o.textContent=`${k} — ${v}`;nb.appendChild(o);});
+  $('city').addEventListener('input',()=>{const c=D.cities[$('city').value]; if(c){cs.value=c; render();}});
+  ['county','fw','cap','bridge','neighbor'].forEach(id=>$(id).addEventListener('change',render));
+  document.querySelectorAll('input[name=role]').forEach(r=>r.addEventListener('change',render));
+  $('copy').addEventListener('click',()=>{navigator.clipboard.writeText($('cmd').textContent).then(()=>{$('copied').textContent='Copied.';setTimeout(()=>$('copied').textContent='',1500);});});
+  render();
+}
+
+function render(){
+  const county=$('county').value, role=document.querySelector('input[name=role]:checked').value;
+  const fw=$('fw').value, cap=$('cap').checked, bridge=$('bridge').checked, neighbor=$('neighbor').value;
+  $('fwfs').classList.toggle('hide', role!=='repeater'); $('optfs').classList.toggle('hide', role!=='repeater');
+  $('bridgesel').classList.toggle('hide', !bridge);
+  if(!county){ $('where').textContent=''; $('summary').innerHTML='<span class="note">Pick a city or county.</span>'; $('cmd').textContent=''; $('notes').innerHTML=''; return; }
+  const sub=D.counties[county], local=D.local[county]||null;
+  const chain=['midwest','mi',sub].concat(local?[local]:[]);
+  $('where').textContent=`${county} County → ${sub} (${D.subregions[sub]})` + (local?` → ${local}`:'');
+  const chips = chain.map(t=> `<span class="chip ${ (t===local) ? 'live' : 'ref'}">${t}</span>`).join('');
+  let s=`<div>${chips}</div><p class="note">${local? `<b>${local}</b> is a live local region.` : `No local region is live for ${county} County yet; carry the chain down to <code>${sub}</code> and talk to your neighbors about a local tag (plain place names, or an airport code only where one is already in use).`}</p>`;
+  let cmd='', notes='';
+  if(role==='companion'){
+    s+=`<p>Set once in the app (companion firmware 1.15+, app 1.43+):</p>`;
+    cmd=`Default scope region: mi\n\nChannel scopes:\n  #michigan → mi\n  #${sub.replace('mi-','')==='west'?'wmi':sub} → ${sub}${local?`\n  #${local} → ${local}`:''}`;
+    notes=`<p class="note">Default scope is <code>mi</code> on purpose: adverts and first messages reach every Michigan repeater, so you discover people and paths statewide. Nothing is required yet; nothing breaks if you set it early.</p>`;
+  } else {
+    if(fw==='old'){ cmd='# Regions need repeater firmware 1.10 or later. Upgrade first.'; }
+    else {
+      const lines=[];
+      if(fw==='116'){
+        lines.push(`region def ${chain.join(' ')}`);
+        if(bridge&&neighbor&&neighbor!==sub) lines.push(`region put ${neighbor} mi`);
+        lines.push(`region default mi`);
+        if(cap) lines.push(`set flood.max.unscoped 3`);
+      } else {
+        let parent='';
+        for(const t of chain){ lines.push(`region put ${t}${parent?' '+parent:''}`); if(fw==='110') lines.push(`region allowf ${t}`); parent=t; }
+        if(bridge&&neighbor&&neighbor!==sub){ lines.push(`region put ${neighbor} mi`); if(fw==='110') lines.push(`region allowf ${neighbor}`); }
+        if(fw==='115') lines.push(`region default mi`);
+      }
+      lines.push(`region save`);
+      cmd=lines.join('\n');
+      if(fw==='110') notes+=`<div class="warn">On 1.10–1.14 a new region is not flood-allowed until you <code>allowf</code> it (included above). No default scope on these versions; the repeater's own adverts stay unscoped. No unscoped cap either.</div>`;
+      if(fw==='115'&&cap) notes+=`<div class="warn"><code>flood.max.unscoped</code> needs 1.16. Left out. Everything else applies.</div>`;
+      if(cap&&fw==='116') notes+=`<p class="note">Cap included. Known issue on 1.16: replies to unscoped logins are flooded unscoped and can be dropped under the cap; companions with a default scope are unaffected. Trial it a week and share what your observer shows.</p>`;
+      if(bridge&&neighbor&&neighbor!==sub) notes+=`<p class="note">Bridge site: default scope stays <code>mi</code>; you also forward <code>${neighbor}</code>. Announce it in the group so cross-region traffic is diagnosable. Don't do this unless you genuinely serve companions there.</p>`;
+      notes+=`<p class="note">Confirm with <code>region</code> (over USB on firmware below 1.12). Then claim a unique prefix and apply the Michigan standard settings from the <a href="https://michmesh.com/docs/MeshCore/Repeater-Setup">Repeater Setup guide</a>.</p>`;
+    }
+  }
+  $('summary').innerHTML=s; $('cmd').textContent=cmd; $('notes').innerHTML=notes;
+}
+</script>
+</body>
+</html>
