@@ -2,6 +2,17 @@
   "title": "Michigan MeshCore Region Map",
   "regions": [
     {
+      "id": "midwest",
+      "name": "Midwest (top-level region)",
+      "short_name": "MIDWEST",
+      "region_type": "Top-level Region",
+      "coordination_status": "political_boundaries",
+      "coordination_label": "Census Bureau Midwest; tag adoption by neighbors TBD",
+      "file": "midwest.geojson",
+      "optional": true,
+      "visible": false
+    },
+    {
       "id": "mi",
       "name": "Michigan (statewide)",
       "short_name": "MI",
@@ -18,7 +29,7 @@
       "short_name": "MI-WEST",
       "region_type": "Michigan Subregion",
       "coordination_status": "proposed",
-      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "coordination_label": "Reference assignment (RFC-001 Addendum A)",
       "file": "mi-west.geojson"
     },
     {
@@ -27,7 +38,7 @@
       "short_name": "MI-CENTRAL",
       "region_type": "Michigan Subregion",
       "coordination_status": "proposed",
-      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "coordination_label": "Reference assignment (RFC-001 Addendum A)",
       "file": "mi-central.geojson"
     },
     {
@@ -36,7 +47,7 @@
       "short_name": "MI-EAST",
       "region_type": "Michigan Subregion",
       "coordination_status": "proposed",
-      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "coordination_label": "Reference assignment (RFC-001 Addendum A)",
       "file": "mi-east.geojson"
     },
     {
@@ -45,7 +56,7 @@
       "short_name": "MI-NORTH",
       "region_type": "Michigan Subregion",
       "coordination_status": "proposed",
-      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "coordination_label": "Reference assignment (RFC-001 Addendum A)",
       "file": "mi-north.geojson"
     },
     {
@@ -54,7 +65,7 @@
       "short_name": "MI-UPPER",
       "region_type": "Michigan Subregion",
       "coordination_status": "proposed",
-      "coordination_label": "Reference assignment (RFC-001 Addendum B)",
+      "coordination_label": "Reference assignment (RFC-001 Addendum A)",
       "file": "mi-upper.geojson"
     }
   ]

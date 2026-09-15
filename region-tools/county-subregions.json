@@ -1,0 +1,1112 @@
+{
+  "_about": "Reference county assignments for Michigan MeshCore subregions per RFC-001 Addendum A. Counties are a default reference, not borders; a repeater carries the regions of the coverage it actually serves.",
+  "_source": "Nielsen DMA county assignments with the adjustments noted in the addendum.",
+  "subregions": {
+    "mi-west": {
+      "basis": "Grand Rapids–Kalamazoo–Battle Creek DMA plus the South Bend–Elkhart spillover counties (Berrien, Cass).",
+      "counties": [
+        {
+          "fips": "26005",
+          "name": "Allegan"
+        },
+        {
+          "fips": "26015",
+          "name": "Barry"
+        },
+        {
+          "fips": "26021",
+          "name": "Berrien"
+        },
+        {
+          "fips": "26023",
+          "name": "Branch"
+        },
+        {
+          "fips": "26025",
+          "name": "Calhoun"
+        },
+        {
+          "fips": "26027",
+          "name": "Cass"
+        },
+        {
+          "fips": "26067",
+          "name": "Ionia"
+        },
+        {
+          "fips": "26077",
+          "name": "Kalamazoo"
+        },
+        {
+          "fips": "26081",
+          "name": "Kent"
+        },
+        {
+          "fips": "26117",
+          "name": "Montcalm"
+        },
+        {
+          "fips": "26121",
+          "name": "Muskegon"
+        },
+        {
+          "fips": "26123",
+          "name": "Newaygo"
+        },
+        {
+          "fips": "26127",
+          "name": "Oceana"
+        },
+        {
+          "fips": "26139",
+          "name": "Ottawa"
+        },
+        {
+          "fips": "26149",
+          "name": "St. Joseph"
+        },
+        {
+          "fips": "26159",
+          "name": "Van Buren"
+        }
+      ]
+    },
+    "mi-central": {
+      "basis": "Flint–Saginaw–Bay City DMA plus the Lansing DMA, plus Sanilac (Detroit DMA) so the Thumb is whole.",
+      "counties": [
+        {
+          "fips": "26011",
+          "name": "Arenac"
+        },
+        {
+          "fips": "26017",
+          "name": "Bay"
+        },
+        {
+          "fips": "26037",
+          "name": "Clinton"
+        },
+        {
+          "fips": "26045",
+          "name": "Eaton"
+        },
+        {
+          "fips": "26049",
+          "name": "Genesee"
+        },
+        {
+          "fips": "26051",
+          "name": "Gladwin"
+        },
+        {
+          "fips": "26057",
+          "name": "Gratiot"
+        },
+        {
+          "fips": "26059",
+          "name": "Hillsdale"
+        },
+        {
+          "fips": "26063",
+          "name": "Huron"
+        },
+        {
+          "fips": "26065",
+          "name": "Ingham"
+        },
+        {
+          "fips": "26069",
+          "name": "Iosco"
+        },
+        {
+          "fips": "26073",
+          "name": "Isabella"
+        },
+        {
+          "fips": "26075",
+          "name": "Jackson"
+        },
+        {
+          "fips": "26111",
+          "name": "Midland"
+        },
+        {
+          "fips": "26129",
+          "name": "Ogemaw"
+        },
+        {
+          "fips": "26145",
+          "name": "Saginaw"
+        },
+        {
+          "fips": "26151",
+          "name": "Sanilac"
+        },
+        {
+          "fips": "26155",
+          "name": "Shiawassee"
+        },
+        {
+          "fips": "26157",
+          "name": "Tuscola"
+        }
+      ]
+    },
+    "mi-east": {
+      "basis": "Detroit DMA less Sanilac, plus the Toledo spillover county (Lenawee).",
+      "counties": [
+        {
+          "fips": "26087",
+          "name": "Lapeer"
+        },
+        {
+          "fips": "26091",
+          "name": "Lenawee"
+        },
+        {
+          "fips": "26093",
+          "name": "Livingston"
+        },
+        {
+          "fips": "26099",
+          "name": "Macomb"
+        },
+        {
+          "fips": "26115",
+          "name": "Monroe"
+        },
+        {
+          "fips": "26125",
+          "name": "Oakland"
+        },
+        {
+          "fips": "26147",
+          "name": "St. Clair"
+        },
+        {
+          "fips": "26161",
+          "name": "Washtenaw"
+        },
+        {
+          "fips": "26163",
+          "name": "Wayne"
+        }
+      ]
+    },
+    "mi-north": {
+      "basis": "Traverse City–Cadillac DMA, Lower Peninsula counties only, plus the Alpena DMA.",
+      "counties": [
+        {
+          "fips": "26001",
+          "name": "Alcona"
+        },
+        {
+          "fips": "26007",
+          "name": "Alpena"
+        },
+        {
+          "fips": "26009",
+          "name": "Antrim"
+        },
+        {
+          "fips": "26019",
+          "name": "Benzie"
+        },
+        {
+          "fips": "26029",
+          "name": "Charlevoix"
+        },
+        {
+          "fips": "26031",
+          "name": "Cheboygan"
+        },
+        {
+          "fips": "26035",
+          "name": "Clare"
+        },
+        {
+          "fips": "26039",
+          "name": "Crawford"
+        },
+        {
+          "fips": "26047",
+          "name": "Emmet"
+        },
+        {
+          "fips": "26055",
+          "name": "Grand Traverse"
+        },
+        {
+          "fips": "26079",
+          "name": "Kalkaska"
+        },
+        {
+          "fips": "26085",
+          "name": "Lake"
+        },
+        {
+          "fips": "26089",
+          "name": "Leelanau"
+        },
+        {
+          "fips": "26101",
+          "name": "Manistee"
+        },
+        {
+          "fips": "26105",
+          "name": "Mason"
+        },
+        {
+          "fips": "26107",
+          "name": "Mecosta"
+        },
+        {
+          "fips": "26113",
+          "name": "Missaukee"
+        },
+        {
+          "fips": "26119",
+          "name": "Montmorency"
+        },
+        {
+          "fips": "26133",
+          "name": "Osceola"
+        },
+        {
+          "fips": "26135",
+          "name": "Oscoda"
+        },
+        {
+          "fips": "26137",
+          "name": "Otsego"
+        },
+        {
+          "fips": "26141",
+          "name": "Presque Isle"
+        },
+        {
+          "fips": "26143",
+          "name": "Roscommon"
+        },
+        {
+          "fips": "26165",
+          "name": "Wexford"
+        }
+      ]
+    },
+    "mi-upper": {
+      "basis": "Marquette DMA, the three Upper Peninsula counties Nielsen assigns to Traverse City (Chippewa, Luce, Mackinac), and the Green Bay (Menominee) and Duluth (Gogebic) spillovers.",
+      "counties": [
+        {
+          "fips": "26003",
+          "name": "Alger"
+        },
+        {
+          "fips": "26013",
+          "name": "Baraga"
+        },
+        {
+          "fips": "26033",
+          "name": "Chippewa"
+        },
+        {
+          "fips": "26041",
+          "name": "Delta"
+        },
+        {
+          "fips": "26043",
+          "name": "Dickinson"
+        },
+        {
+          "fips": "26053",
+          "name": "Gogebic"
+        },
+        {
+          "fips": "26061",
+          "name": "Houghton"
+        },
+        {
+          "fips": "26071",
+          "name": "Iron"
+        },
+        {
+          "fips": "26083",
+          "name": "Keweenaw"
+        },
+        {
+          "fips": "26095",
+          "name": "Luce"
+        },
+        {
+          "fips": "26097",
+          "name": "Mackinac"
+        },
+        {
+          "fips": "26103",
+          "name": "Marquette"
+        },
+        {
+          "fips": "26109",
+          "name": "Menominee"
+        },
+        {
+          "fips": "26131",
+          "name": "Ontonagon"
+        },
+        {
+          "fips": "26153",
+          "name": "Schoolcraft"
+        }
+      ]
+    }
+  },
+  "counties": {
+    "26001": {
+      "name": "Alcona",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26003": {
+      "name": "Alger",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26005": {
+      "name": "Allegan",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26007": {
+      "name": "Alpena",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26009": {
+      "name": "Antrim",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26011": {
+      "name": "Arenac",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26013": {
+      "name": "Baraga",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26015": {
+      "name": "Barry",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26017": {
+      "name": "Bay",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26019": {
+      "name": "Benzie",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26021": {
+      "name": "Berrien",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26023": {
+      "name": "Branch",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26025": {
+      "name": "Calhoun",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26027": {
+      "name": "Cass",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26029": {
+      "name": "Charlevoix",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26031": {
+      "name": "Cheboygan",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26033": {
+      "name": "Chippewa",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26035": {
+      "name": "Clare",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26037": {
+      "name": "Clinton",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26039": {
+      "name": "Crawford",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26041": {
+      "name": "Delta",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26043": {
+      "name": "Dickinson",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26045": {
+      "name": "Eaton",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26047": {
+      "name": "Emmet",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26049": {
+      "name": "Genesee",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26051": {
+      "name": "Gladwin",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26053": {
+      "name": "Gogebic",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26055": {
+      "name": "Grand Traverse",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26057": {
+      "name": "Gratiot",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26059": {
+      "name": "Hillsdale",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26061": {
+      "name": "Houghton",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26063": {
+      "name": "Huron",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26065": {
+      "name": "Ingham",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26067": {
+      "name": "Ionia",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26069": {
+      "name": "Iosco",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26071": {
+      "name": "Iron",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26073": {
+      "name": "Isabella",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26075": {
+      "name": "Jackson",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26077": {
+      "name": "Kalamazoo",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26079": {
+      "name": "Kalkaska",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26081": {
+      "name": "Kent",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26083": {
+      "name": "Keweenaw",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26085": {
+      "name": "Lake",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26087": {
+      "name": "Lapeer",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26089": {
+      "name": "Leelanau",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26091": {
+      "name": "Lenawee",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26093": {
+      "name": "Livingston",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26095": {
+      "name": "Luce",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26097": {
+      "name": "Mackinac",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26099": {
+      "name": "Macomb",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26101": {
+      "name": "Manistee",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26103": {
+      "name": "Marquette",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26105": {
+      "name": "Mason",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26107": {
+      "name": "Mecosta",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26109": {
+      "name": "Menominee",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26111": {
+      "name": "Midland",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26113": {
+      "name": "Missaukee",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26115": {
+      "name": "Monroe",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26117": {
+      "name": "Montcalm",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26119": {
+      "name": "Montmorency",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26121": {
+      "name": "Muskegon",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26123": {
+      "name": "Newaygo",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26125": {
+      "name": "Oakland",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26127": {
+      "name": "Oceana",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26129": {
+      "name": "Ogemaw",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26131": {
+      "name": "Ontonagon",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26133": {
+      "name": "Osceola",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26135": {
+      "name": "Oscoda",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26137": {
+      "name": "Otsego",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26139": {
+      "name": "Ottawa",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26141": {
+      "name": "Presque Isle",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26143": {
+      "name": "Roscommon",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    },
+    "26145": {
+      "name": "Saginaw",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26147": {
+      "name": "St. Clair",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26149": {
+      "name": "St. Joseph",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26151": {
+      "name": "Sanilac",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26153": {
+      "name": "Schoolcraft",
+      "subregion": "mi-upper",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-upper"
+      ]
+    },
+    "26155": {
+      "name": "Shiawassee",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26157": {
+      "name": "Tuscola",
+      "subregion": "mi-central",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-central"
+      ]
+    },
+    "26159": {
+      "name": "Van Buren",
+      "subregion": "mi-west",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-west"
+      ]
+    },
+    "26161": {
+      "name": "Washtenaw",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26163": {
+      "name": "Wayne",
+      "subregion": "mi-east",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-east"
+      ]
+    },
+    "26165": {
+      "name": "Wexford",
+      "subregion": "mi-north",
+      "path": [
+        "midwest",
+        "mi",
+        "mi-north"
+      ]
+    }
+  }
+}
